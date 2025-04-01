@@ -6,9 +6,9 @@ the default controller to sim and real, run build/sim_ctrl or build/z1_ctrl for 
 
 the sim env for z1, run
 
-'''
+~~~
 roslaunch unitree_gazebo z1.launch
-'''
+~~~
 
 to startup gazebo
 
