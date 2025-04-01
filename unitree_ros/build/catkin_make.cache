@@ -1,0 +1,2 @@
+z1_sdk
+-DCATKIN_DEVEL_PREFIX=/home/oceanyan/Files/Robotics/unitree_ros/devel -DCMAKE_INSTALL_PREFIX=/home/oceanyan/Files/Robotics/unitree_ros/install -G Unix Makefiles

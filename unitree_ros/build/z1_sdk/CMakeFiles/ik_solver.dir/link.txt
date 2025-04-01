@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O3 -std=c++14 -pthread  -shared -Wl,-soname,libik_solver.so -o /home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o   -L/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/lib 

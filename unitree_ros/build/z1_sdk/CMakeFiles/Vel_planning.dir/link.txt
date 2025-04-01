@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O3 -std=c++14 -pthread  -shared -Wl,-soname,libVel_planning.so -o /home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libVel_planning.so CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.o   -L/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/lib 

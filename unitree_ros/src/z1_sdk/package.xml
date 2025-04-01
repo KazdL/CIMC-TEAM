@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>z1_sdk</name>
+  <version>0.0.0</version>
+  <description>The z1_sdk package</description>
+  <!-- 维护人员信息 -->
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+
+  <!-- 开发者信息 -->
+  <author email="author_email@example.com">Author Name</author>
+
+  <!-- 许可证 -->
+  <license>BSD</license>
+
+  <!-- 依赖项 -->
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
+  
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+
+  <build_depend>catkin</build_depend> <!-- 构建时依赖catkin -->
+  <build_depend>pinocchio</build_depend> <!-- 构建时依赖pinocchio库 -->
+  <exec_depend>roscpp</exec_depend> <!-- 运行时依赖roscpp库 -->
+  <exec_depend>std_msgs</exec_depend> <!-- 运行时依赖std_msgs库 -->
+
+  <!-- 该包没有特殊的测试依赖 -->
+  <test_depend>gtest</test_depend>
+
+  <!-- 这个包是一个ROS节点 -->
+  <export>
+    <architecture_independent/>
+  </export>
+</package>
+

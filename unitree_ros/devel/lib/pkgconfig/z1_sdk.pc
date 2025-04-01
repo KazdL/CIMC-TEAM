@@ -1,0 +1,8 @@
+prefix=/home/oceanyan/Files/Robotics/unitree_ros/devel
+
+Name: z1_sdk
+Description: Description of z1_sdk
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
