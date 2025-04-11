@@ -3,25 +3,19 @@
 import rospy
 import serial
 import serial.tools.list_ports
-from std_msgs.msg import String
+from geometry_msgs.msg import Wrench, Vector3
 import struct
-import numpy as np
 import time
 
-"""
-    使用python实现消息发布：
-        1.导包
-        2.初始化ROS
-        3.创建发布者对象
-        4.变现发布逻辑并发布数据
-
-"""
-
+# 将16进制数据转换为浮点数
 def hextofloat(h):
-    
-    return struct.unpack("<f",h)[0]
+    return struct.unpack("<f", bytes(h))[0]
 
 if __name__ == "__main__":
+    # 初始化ROS节点
+    rospy.init_node("serial_to_ros_publisher")
+
+    # 获取串口设备列表
     ports_list = list(serial.tools.list_ports.comports())
     if len(ports_list) <= 0:
         print("无串口设备。")
@@ -30,52 +24,64 @@ if __name__ == "__main__":
         for comport in ports_list:
             print(list(comport)[0], list(comport)[1])
 
-    # 方式1：调用函数接口打开串口时传入配置参数
-
- 
-    ser = serial.Serial("/dev/ttyUSB0", 460800)    # 打开COM17，将波特率配置为115200，其余参数使用默认值
-    if ser.isOpen():                        # 判断串口是否成功打开
-        print("打开串口成功。")
-        print(ser.name)    # 输出串口号
+    # 配置并打开串口
+    ser = serial.Serial("/dev/ttyUSB0", 460800)  # 修改为实际串口
+    if ser.isOpen():
+        print("打开串口成功：", ser.name)
     else:
         print("打开串口失败。")
-    # rospy.init_node("demo01_pub_p")
-    # rate = rospy.Rate(1)
-    data = [0x49,0xAA,0x0D,0x0A]
+        exit()
 
-    while True:
+    # 创建发布者，发布的数据类型为Wrench
+    pub = rospy.Publisher("wrench", Wrench, queue_size=10)
+
+    # 设置发布频率
+    rate = rospy.Rate(10)  # 每秒10次发布
+
+    while not rospy.is_shutdown():
+        # 发送数据给串口设备
+        data = [0x49, 0xAA, 0x0D, 0x0A]
         write_len = ser.write(data)
-        print("串口发出{}个字节。".format(write_len))
+        print("串口发出{}个字节".format(write_len))
+
+        # 从串口读取28个字节的数据
         com_input = ser.read(28)
-        input = []
-        for i in range (28):
-            input.append(hex(com_input[i]))
+        input_data = [hex(byte) for byte in com_input]
 
-        if com_input:   # 如果读取结果非空，则输出
-            if input[0] == '0x49' and input[1] == '0xaa':
-                print('fx:',hextofloat(com_input[2:6]),end="\t")
-                print('fy:',hextofloat(com_input[6:10]),end="\t")
-                print('fz:',hextofloat(com_input[10:14]),end="\t")
-                print('Mx:',hextofloat(com_input[14:18]),end="\t")
-                print('My:',hextofloat(com_input[18:22]),end="\t")
-                print('Mz:',hextofloat(com_input[22:26]),end="\t")
-        # rate.sleep()
-        time.sleep(0.05)
-    
+        # 如果读取到数据并且是有效的（以0x49和0xAA开始）
+        if com_input and input_data[0] == '0x49' and input_data[1] == '0xaa':
+            # 解析数据，提取力和力矩信息
+            fx = hextofloat(com_input[2:6])
+            fy = hextofloat(com_input[6:10])
+            fz = hextofloat(com_input[10:14])
+            mx = hextofloat(com_input[14:18])
+            my = hextofloat(com_input[18:22])
+            mz = hextofloat(com_input[22:26])
+
+            # 输出数据
+            rospy.loginfo("fx: %f, fy: %f, fz: %f, Mx: %f, My: %f, Mz: %f",
+                          fx, fy, fz, mx, my, mz)
+
+            # 创建Wrench消息并存储力和力矩
+            wrench_msg = Wrench()
+
+            # 设置力（force）字段
+            wrench_msg.force = Vector3()
+            wrench_msg.force.x = fx
+            wrench_msg.force.y = fy
+            wrench_msg.force.z = fz
+
+            # 设置力矩（torque）字段
+            wrench_msg.torque = Vector3()
+            wrench_msg.torque.x = mx
+            wrench_msg.torque.y = my
+            wrench_msg.torque.z = mz
+
+            # 发布消息
+            pub.publish(wrench_msg)
+
+        # 控制发布频率
+        rate.sleep()
+
+    # 关闭串口
     ser.close()
-
-
-    # rospy.init_node("demo01_pub_p")
-    # pub = rospy.Publisher("che",String,queue_size=10)
-    # # 创建数据
-    # msg = String()
-    # # 制定发布频率
-    # rate = rospy.Rate(1) # 以秒为单位计时
-    # count = 0
-    # rospy.sleep(3)
-    # while not rospy.is_shutdown():
-    #     count +=1
-    #     msg.data = "hello" + str(count)
-    #     pub.publish(msg)
-
-    #     rate.sleep()
