@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/include/unitree_arm_sdk/ik_solver/ik_solver.h
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/include/unitree_arm_sdk/ik_solver/ik_solver.h
 pinocchio/parsers/urdf.hpp
 -
 pinocchio/algorithm/kinematics.hpp
@@ -14,13 +14,13 @@ pinocchio/algorithm/kinematics.hpp
 pinocchio/algorithm/jacobian.hpp
 -
 pinocchio/algorithm/joint-configuration.hpp
-/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/include/unitree_arm_sdk/ik_solver/pinocchio/algorithm/joint-configuration.hpp
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/include/unitree_arm_sdk/ik_solver/pinocchio/algorithm/joint-configuration.hpp
 iostream
 -
 
-/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/ik_solver.cpp
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/ik_solver.cpp
 unitree_arm_sdk/ik_solver/ik_solver.h
-/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/unitree_arm_sdk/ik_solver/ik_solver.h
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/unitree_arm_sdk/ik_solver/ik_solver.h
 
 /opt/ros/noetic/include/hpp/fcl/BV/AABB.h
 hpp/fcl/data_types.h

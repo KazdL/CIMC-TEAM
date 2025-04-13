@@ -19,11 +19,15 @@
   <build_depend>std_msgs</build_depend>
   <exec_depend>std_msgs</exec_depend>
 
+  <build_depend>geometry_msgs</build_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
 
   <build_depend>catkin</build_depend> <!-- 构建时依赖catkin -->
   <build_depend>pinocchio</build_depend> <!-- 构建时依赖pinocchio库 -->
   <exec_depend>roscpp</exec_depend> <!-- 运行时依赖roscpp库 -->
   <exec_depend>std_msgs</exec_depend> <!-- 运行时依赖std_msgs库 -->
+  <exec_depend>geometry_msgs</exec_depend> 
 
   <!-- 该包没有特殊的测试依赖 -->
   <test_depend>gtest</test_depend>

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ros/devel/lib/z1_sdk/main_node"
-  "/home/oceanyan/Files/Robotics/unitree_ros/devel/lib/z1_sdk/main_node.pdb"
+  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/z1_sdk/main_node"
+  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/z1_sdk/main_node.pdb"
   "CMakeFiles/main_node.dir/src/main_node.cpp.o"
 )
 

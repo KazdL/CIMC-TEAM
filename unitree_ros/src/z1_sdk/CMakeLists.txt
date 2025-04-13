@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  geometry_msgs
 )
 
 find_package(pinocchio REQUIRED)
@@ -108,9 +109,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++14 -pthread")
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+ INCLUDE_DIRS include
 #  LIBRARIES test
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+ CATKIN_DEPENDS roscpp std_msgs geometry_msgs
 #  DEPENDS system_lib
 )
 
@@ -134,12 +135,16 @@ include_directories(
 link_directories(lib ${Pinocchio_LIBRARY_DIRS})
 
 add_library(ik_solver ./src/ik_solver.cpp)
+
 add_library(dataframe ./src/dataframe.cpp)
+target_link_libraries(dataframe ${catkin_LIBRARIES})
+
 add_library(Vel_planning ./src/Velocity_planning.cpp)
 
 set(EXAMPLES_FILES
     
     src/main_node.cpp
+    src/main_test.cpp
 )
 
 

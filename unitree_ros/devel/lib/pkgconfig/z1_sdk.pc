@@ -1,8 +1,8 @@
-prefix=/home/oceanyan/Files/Robotics/unitree_ros/devel
+prefix=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel
 
 Name: z1_sdk
 Description: Description of z1_sdk
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp std_msgs geometry_msgs

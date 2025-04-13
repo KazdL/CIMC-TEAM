@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ros/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ros/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build
 
 # Include any dependencies generated for this target.
 include z1_sdk/CMakeFiles/ik_solver.dir/depend.make
@@ -58,17 +58,17 @@ include z1_sdk/CMakeFiles/ik_solver.dir/progress.make
 include z1_sdk/CMakeFiles/ik_solver.dir/flags.make
 
 z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o: z1_sdk/CMakeFiles/ik_solver.dir/flags.make
-z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o: /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/ik_solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oceanyan/Files/Robotics/unitree_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o"
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o -c /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/ik_solver.cpp
+z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/ik_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o"
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o -c /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/ik_solver.cpp
 
 z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i"
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/ik_solver.cpp > CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/ik_solver.cpp > CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i
 
 z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s"
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/src/ik_solver.cpp -o CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/src/ik_solver.cpp -o CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s
 
 # Object files for target ik_solver
 ik_solver_OBJECTS = \
@@ -77,22 +77,22 @@ ik_solver_OBJECTS = \
 # External object files for target ik_solver
 ik_solver_EXTERNAL_OBJECTS =
 
-/home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o
-/home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/build.make
-/home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oceanyan/Files/Robotics/unitree_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so"
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ik_solver.dir/link.txt --verbose=$(VERBOSE)
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/build.make
+/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so: z1_sdk/CMakeFiles/ik_solver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so"
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ik_solver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-z1_sdk/CMakeFiles/ik_solver.dir/build: /home/oceanyan/Files/Robotics/unitree_ros/devel/lib/libik_solver.so
+z1_sdk/CMakeFiles/ik_solver.dir/build: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so
 
 .PHONY : z1_sdk/CMakeFiles/ik_solver.dir/build
 
 z1_sdk/CMakeFiles/ik_solver.dir/clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk && $(CMAKE_COMMAND) -P CMakeFiles/ik_solver.dir/cmake_clean.cmake
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk && $(CMAKE_COMMAND) -P CMakeFiles/ik_solver.dir/cmake_clean.cmake
 .PHONY : z1_sdk/CMakeFiles/ik_solver.dir/clean
 
 z1_sdk/CMakeFiles/ik_solver.dir/depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ros/src /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk /home/oceanyan/Files/Robotics/unitree_ros/build /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk /home/oceanyan/Files/Robotics/unitree_ros/build/z1_sdk/CMakeFiles/ik_solver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk/CMakeFiles/ik_solver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : z1_sdk/CMakeFiles/ik_solver.dir/depend
 

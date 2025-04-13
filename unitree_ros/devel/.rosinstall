@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/oceanyan/Files/Robotics/unitree_ros/devel/setup.sh
+    local-name: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/setup.sh

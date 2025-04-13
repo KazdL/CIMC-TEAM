@@ -6,5 +6,5 @@ CXX_FLAGS =  -O3 -std=c++14 -pthread -fPIC   -std=gnu++14
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"z1_sdk\" -DVel_planning_EXPORTS
 
-CXX_INCLUDES = -I/home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

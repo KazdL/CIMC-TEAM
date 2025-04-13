@@ -67,14 +67,14 @@ set(z1_sdk_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(z1_sdk_SOURCE_PREFIX /home/oceanyan/Files/Robotics/unitree_ros/src/z1_sdk)
-  set(z1_sdk_DEVEL_PREFIX /home/oceanyan/Files/Robotics/unitree_ros/devel)
+  set(z1_sdk_SOURCE_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk)
+  set(z1_sdk_DEVEL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel)
   set(z1_sdk_INSTALL_PREFIX "")
   set(z1_sdk_PREFIX ${z1_sdk_DEVEL_PREFIX})
 else()
   set(z1_sdk_SOURCE_PREFIX "")
   set(z1_sdk_DEVEL_PREFIX "")
-  set(z1_sdk_INSTALL_PREFIX /home/oceanyan/Files/Robotics/unitree_ros/install)
+  set(z1_sdk_INSTALL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install)
   set(z1_sdk_PREFIX ${z1_sdk_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(z1_sdk_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(z1_sdk_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/oceanyan/Files/Robotics/unitree_ros/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install/lib;/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${z1_sdk_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;std_msgs;geometry_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

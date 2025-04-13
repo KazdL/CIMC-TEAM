@@ -1,4 +1,5 @@
 #include "unitree_arm_sdk/control/Velocity_planning.h"
+#include "unitree_arm_sdk/sensor/dataframe.h"
 #include "ros/ros.h"
 
 int main(int argc, char *argv[])
@@ -6,17 +7,24 @@ int main(int argc, char *argv[])
     ros::init(argc, argv, "main_node");
     ros::NodeHandle nh;
 
+    // objects definition
     Vel_Planning planner;
-    planner.sendRecvThread->start();
-    planner.backToStart();
-    planner.startTrack(UNITREE_ARM::ArmFSMState::JOINTCTRL);
-    Vec6 targetpos;
+    Dataframe sensor_data;
     UNITREE_ARM::Timer timer(planner._ctrlComp->dt);
+
+    // variables definition 
+    Vec6 targetpos;
     Vec6 cmdPos, cmdVel;
     bool motion_ready = true;
     std::string status = "init";
 
+    // robot action init
+    planner.sendRecvThread->start();
+    planner.backToStart();
+    planner.startTrack(UNITREE_ARM::ArmFSMState::JOINTCTRL);
     
+    
+
     while(ros::ok())
     {
         if(motion_ready)
