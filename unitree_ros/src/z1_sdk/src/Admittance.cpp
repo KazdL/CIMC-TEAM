@@ -23,7 +23,7 @@ AdmittanceController::AdmittanceController(
     pos_append = Vec6::Zero();
 }
 
-Vec6 AdmittanceController::update_pos(const Vec6& pos, const Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& fd) {
+Vec6 AdmittanceController::update_pos(const Vec6& pos, const Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& ee_force) {
     // Compute position and velocity errors
     pos_err = pos - xd;
     vel_err = vel - d_xd;

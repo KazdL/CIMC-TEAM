@@ -1,6 +1,7 @@
 #include "unitree_arm_sdk/control/Velocity_planning.h"
 #include "unitree_arm_sdk/sensor/dataframe.h"
 #include "ros/ros.h"
+#include "unitree_arm_sdk/control/AdmittanceController.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,9 +13,18 @@ int main(int argc, char *argv[])
     Dataframe sensor_data;
     UNITREE_ARM::Timer timer(planner._ctrlComp->dt);
 
+    Vec6 d_mass = Vec6::Constant(1.0); // 默认质量
+    Vec6 d_stiffness;
+    d_stiffness << 400.0, 400.0, 400.0, 400.0, 400.0, 400.0; // 默认刚度
+    double d_damping_ratio = 1.0; // 默认阻尼比
+    Vec6 d_stiffness_force = Vec6::Zero(); // 默认力刚度
+    double timestep = 0.005; // 时间步长
+    AdmittanceController controller(d_mass, d_stiffness, d_damping_ratio, d_stiffness_force, timestep);
+
     // variables definition 
     Vec6 targetpos;
     Vec6 cmdPos, cmdVel;
+    Vec6 xd, d_xd, dd_xd;
     bool motion_ready = true;
     std::string status = "init";
 
@@ -22,7 +32,8 @@ int main(int argc, char *argv[])
     planner.sendRecvThread->start();
     planner.backToStart();
     planner.startTrack(UNITREE_ARM::ArmFSMState::JOINTCTRL);
-    
+
+    std::list<Vec6> xd_list, dxd_list, ddxd_list;
     
 
     while(ros::ok())
@@ -57,6 +68,14 @@ int main(int argc, char *argv[])
             else
             {
                 cmdVel.Zero();
+                xd = xd_list.front();
+                d_xd = dxd_list.front();
+                dd_xd = ddxd_list.front();
+                xd_list.pop();
+                dxd_list.pop();
+                ddxd_list.pop();
+                target = controller.update_pos(cmdPos, cmdVel, xd, d_xd, dd_xd, sensor_data.ee_force);
+                planner.trape_move_cart(target);
                 motion_ready = true;
             }
         }
