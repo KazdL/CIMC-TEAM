@@ -1,8 +1,8 @@
-# Install script for directory: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO
+# Install script for directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IO.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IO.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Sensor_IO/cmake" TYPE FILE FILES
-    "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IOConfig.cmake"
-    "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IOConfig-version.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IOConfig.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/catkin_generated/installspace/Sensor_IOConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Sensor_IO" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Sensor_IO" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Sensor_IO" TYPE PROGRAM FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/catkin_generated/installspace/force_data_read.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Sensor_IO" TYPE PROGRAM FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/catkin_generated/installspace/force_data_read.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Sensor_IO" TYPE PROGRAM FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/catkin_generated/installspace/read_test.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Sensor_IO" TYPE PROGRAM FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/catkin_generated/installspace/read_test.py")
 endif()
 

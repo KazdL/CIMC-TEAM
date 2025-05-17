@@ -67,14 +67,14 @@ set(z1_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(z1_description_SOURCE_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/z1_description)
-  set(z1_description_DEVEL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel)
+  set(z1_description_SOURCE_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/z1_description)
+  set(z1_description_DEVEL_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel)
   set(z1_description_INSTALL_PREFIX "")
   set(z1_description_PREFIX ${z1_description_DEVEL_PREFIX})
 else()
   set(z1_description_SOURCE_PREFIX "")
   set(z1_description_DEVEL_PREFIX "")
-  set(z1_description_INSTALL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/install)
+  set(z1_description_INSTALL_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/install)
   set(z1_description_PREFIX ${z1_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/install/lib;/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

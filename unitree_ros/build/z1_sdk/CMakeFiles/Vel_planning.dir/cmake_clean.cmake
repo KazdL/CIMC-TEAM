@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libVel_planning.pdb"
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libVel_planning.so"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libVel_planning.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libVel_planning.so"
   "CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.o"
 )
 

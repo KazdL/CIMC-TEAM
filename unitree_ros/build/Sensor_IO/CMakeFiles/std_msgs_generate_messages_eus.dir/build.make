@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build
 
 # Utility rule file for std_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/build: std_msgs_generate
 .PHONY : Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 
 Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Sensor_IO/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 

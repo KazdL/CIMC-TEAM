@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/libunitreeFootContactPlugin.pdb"
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/libunitreeFootContactPlugin.so"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/libunitreeFootContactPlugin.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/libunitreeFootContactPlugin.so"
   "CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.o"
 )
 

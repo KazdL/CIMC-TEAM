@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libdataframe.pdb"
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libdataframe.so"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libdataframe.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libdataframe.so"
   "CMakeFiles/dataframe.dir/src/dataframe.cpp.o"
 )
 

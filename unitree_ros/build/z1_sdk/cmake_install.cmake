@@ -1,8 +1,8 @@
-# Install script for directory: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk
+# Install script for directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/z1_sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdk.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdk.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/z1_sdk/cmake" TYPE FILE FILES
-    "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdkConfig.cmake"
-    "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdkConfig-version.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdkConfig.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/z1_sdk/catkin_generated/installspace/z1_sdkConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/z1_sdk" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/z1_sdk" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/z1_sdk/package.xml")
 endif()
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/CMakeFiles /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/unitree_gazebo/CMakeFiles/progress.marks
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/CMakeFiles 0
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/CMakeFiles /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/unitree_gazebo/CMakeFiles/progress.marks
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/clean
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/preinstall
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/preinstall
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/rule
 .PHONY : unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ unitreeDrawForcePlugin: unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePl
 
 # fast build rule for target.
 unitreeDrawForcePlugin/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build
 .PHONY : unitreeDrawForcePlugin/fast
 
 # Convenience name for target.
 unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f CMakeFiles/Makefile2 unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/rule
 .PHONY : unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ unitreeFootContactPlugin: unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootConta
 
 # fast build rule for target.
 unitreeFootContactPlugin/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build
 .PHONY : unitreeFootContactPlugin/fast
 
 plugin/draw_force_plugin.o: plugin/draw_force_plugin.cc.o
@@ -203,7 +203,7 @@ plugin/draw_force_plugin.o: plugin/draw_force_plugin.cc.o
 
 # target to build an object file
 plugin/draw_force_plugin.cc.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.o
 .PHONY : plugin/draw_force_plugin.cc.o
 
 plugin/draw_force_plugin.i: plugin/draw_force_plugin.cc.i
@@ -212,7 +212,7 @@ plugin/draw_force_plugin.i: plugin/draw_force_plugin.cc.i
 
 # target to preprocess a source file
 plugin/draw_force_plugin.cc.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.i
 .PHONY : plugin/draw_force_plugin.cc.i
 
 plugin/draw_force_plugin.s: plugin/draw_force_plugin.cc.s
@@ -221,7 +221,7 @@ plugin/draw_force_plugin.s: plugin/draw_force_plugin.cc.s
 
 # target to generate assembly for a file
 plugin/draw_force_plugin.cc.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.s
 .PHONY : plugin/draw_force_plugin.cc.s
 
 plugin/foot_contact_plugin.o: plugin/foot_contact_plugin.cc.o
@@ -230,7 +230,7 @@ plugin/foot_contact_plugin.o: plugin/foot_contact_plugin.cc.o
 
 # target to build an object file
 plugin/foot_contact_plugin.cc.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.o
 .PHONY : plugin/foot_contact_plugin.cc.o
 
 plugin/foot_contact_plugin.i: plugin/foot_contact_plugin.cc.i
@@ -239,7 +239,7 @@ plugin/foot_contact_plugin.i: plugin/foot_contact_plugin.cc.i
 
 # target to preprocess a source file
 plugin/foot_contact_plugin.cc.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.i
 .PHONY : plugin/foot_contact_plugin.cc.i
 
 plugin/foot_contact_plugin.s: plugin/foot_contact_plugin.cc.s
@@ -248,7 +248,7 @@ plugin/foot_contact_plugin.s: plugin/foot_contact_plugin.cc.s
 
 # target to generate assembly for a file
 plugin/foot_contact_plugin.cc.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(MAKE) -f unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/build.make unitree_ros/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.s
 .PHONY : plugin/foot_contact_plugin.cc.s
 
 # Help Target
@@ -283,6 +283,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

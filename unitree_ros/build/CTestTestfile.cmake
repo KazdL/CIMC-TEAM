@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src
-# Build directory: /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build
+# Source directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src
+# Build directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

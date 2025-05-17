@@ -1,2 +1,2 @@
 Sensor_IO:z1_sdk
--DCATKIN_DEVEL_PREFIX=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel -DCMAKE_INSTALL_PREFIX=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel -DCMAKE_INSTALL_PREFIX=/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install -G Unix Makefiles

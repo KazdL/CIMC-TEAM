@@ -14,7 +14,7 @@ public:
         const Vec6& fd = (Vec6() << 0.5, 0, 0, 0, 0, 0).finished()
     );
 
-    Vec6 update_pos(const Vec6& pos, const Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& fd);
+    Vec6 update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& fd);
 
 private:
     Vec6 Md, Kd, Dd, Kf;
@@ -23,6 +23,7 @@ private:
     Vec6 cart_acc_append, vel_append, pos_append;
     double damping_ratio;
     double timestep;
+    Vec6 fd;
 };
 
 #endif // ADMITTANCE_CONTROLLER_H

@@ -1,4 +1,4 @@
-prefix=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install
+prefix=/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install
 
 Name: z1_sdk
 Description: Description of z1_sdk

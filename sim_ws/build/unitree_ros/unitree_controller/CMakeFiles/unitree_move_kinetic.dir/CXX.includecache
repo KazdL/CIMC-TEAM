@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/unitree_controller/src/move_publisher.cpp
+/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/unitree_controller/src/move_publisher.cpp
 ros/ros.h
 -
 gazebo_msgs/ModelState.h

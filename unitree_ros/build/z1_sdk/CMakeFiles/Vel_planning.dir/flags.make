@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  -O3 -std=c++14 -pthread -fPIC   -std=gnu++14
 
-CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"z1_sdk\" -DVel_planning_EXPORTS
+CXX_DEFINES = -DBOOST_MPL_LIMIT_LIST_SIZE=30 -DBOOST_MPL_LIMIT_VECTOR_SIZE=30 -DHPP_FCL_HAS_OCTOMAP -DHPP_FCL_HAVE_OCTOMAP -DOCTOMAP_MAJOR_VERSION=1 -DOCTOMAP_MINOR_VERSION=9 -DOCTOMAP_PATCH_VERSION=3 -DPINOCCHIO_ENABLE_TEMPLATE_INSTANTIATION -DPINOCCHIO_WITH_HPP_FCL -DPINOCCHIO_WITH_URDFDOM -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"z1_sdk\" -DVel_planning_EXPORTS
 
-CXX_INCLUDES = -I/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/z1_sdk/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/z1_sdk/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /opt/ros/noetic/include -isystem /usr/include/eigen3 
 

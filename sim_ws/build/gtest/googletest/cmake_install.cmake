@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

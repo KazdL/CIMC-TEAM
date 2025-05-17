@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/libunitree_legged_control.pdb"
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/libunitree_legged_control.so"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/libunitree_legged_control.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/libunitree_legged_control.so"
   "CMakeFiles/unitree_legged_control.dir/src/joint_controller.cpp.o"
   "CMakeFiles/unitree_legged_control.dir/src/unitree_joint_control_tool.cpp.o"
 )

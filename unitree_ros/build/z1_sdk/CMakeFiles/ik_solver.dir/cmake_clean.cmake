@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.pdb"
-  "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib/libik_solver.so"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libik_solver.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libik_solver.so"
   "CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o"
 )
 

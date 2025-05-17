@@ -136,10 +136,15 @@ link_directories(lib ${Pinocchio_LIBRARY_DIRS})
 
 add_library(ik_solver ./src/ik_solver.cpp)
 
-add_library(dataframe ./src/dataframe.cpp)
-target_link_libraries(dataframe ${catkin_LIBRARIES})
+add_library(admittance ./src/Admittance.cpp)
 
 add_library(Vel_planning ./src/Velocity_planning.cpp)
+target_link_libraries(Vel_planning ik_solver pinocchio::pinocchio Z1_SDK_${CMAKE_SYSTEM_PROCESSOR})
+
+add_library(dataframe ./src/dataframe.cpp)
+target_link_libraries(dataframe ${catkin_LIBRARIES} Vel_planning)
+
+
 
 set(EXAMPLES_FILES
     
@@ -153,7 +158,7 @@ foreach(EXAMPLE_FILE IN LISTS EXAMPLES_FILES)
   get_filename_component(EXAMPLE_NAME ${EXAMPLE_FILE} NAME_WE)
   add_executable(${EXAMPLE_NAME} ${EXAMPLE_FILE})
   target_link_libraries(${EXAMPLE_NAME} Z1_SDK_${CMAKE_SYSTEM_PROCESSOR} ik_solver
-  pinocchio::pinocchio Vel_planning dataframe ${catkin_LIBRARIES})
+  pinocchio::pinocchio Vel_planning dataframe admittance ${catkin_LIBRARIES})
 endforeach()
 
 ## Add cmake target dependencies of the library

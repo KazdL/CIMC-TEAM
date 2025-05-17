@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/unitree_controller/unitree_external_force"
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/unitree_controller/unitree_external_force.pdb"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/unitree_controller/unitree_external_force"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/unitree_controller/unitree_external_force.pdb"
   "CMakeFiles/unitree_external_force.dir/src/external_force.cpp.o"
 )
 

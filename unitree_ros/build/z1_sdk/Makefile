@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,18 +67,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -135,16 +123,28 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/CMakeFiles /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/z1_sdk/CMakeFiles/progress.marks
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build/CMakeFiles 0
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/CMakeFiles /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/z1_sdk/CMakeFiles/progress.marks
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/clean
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/preinstall
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/preinstall
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 z1_sdk/CMakeFiles/main_test.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/main_test.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/main_test.dir/rule
 .PHONY : z1_sdk/CMakeFiles/main_test.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ main_test: z1_sdk/CMakeFiles/main_test.dir/rule
 
 # fast build rule for target.
 main_test/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/build
 .PHONY : main_test/fast
 
 # Convenience name for target.
 z1_sdk/CMakeFiles/main_node.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/main_node.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/main_node.dir/rule
 .PHONY : z1_sdk/CMakeFiles/main_node.dir/rule
 
 # Convenience name for target.
@@ -194,27 +194,12 @@ main_node: z1_sdk/CMakeFiles/main_node.dir/rule
 
 # fast build rule for target.
 main_node/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/build
 .PHONY : main_node/fast
 
 # Convenience name for target.
-z1_sdk/CMakeFiles/Vel_planning.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/Vel_planning.dir/rule
-.PHONY : z1_sdk/CMakeFiles/Vel_planning.dir/rule
-
-# Convenience name for target.
-Vel_planning: z1_sdk/CMakeFiles/Vel_planning.dir/rule
-
-.PHONY : Vel_planning
-
-# fast build rule for target.
-Vel_planning/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/build
-.PHONY : Vel_planning/fast
-
-# Convenience name for target.
 z1_sdk/CMakeFiles/dataframe.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/dataframe.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/dataframe.dir/rule
 .PHONY : z1_sdk/CMakeFiles/dataframe.dir/rule
 
 # Convenience name for target.
@@ -224,12 +209,42 @@ dataframe: z1_sdk/CMakeFiles/dataframe.dir/rule
 
 # fast build rule for target.
 dataframe/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/build
 .PHONY : dataframe/fast
 
 # Convenience name for target.
+z1_sdk/CMakeFiles/Vel_planning.dir/rule:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/Vel_planning.dir/rule
+.PHONY : z1_sdk/CMakeFiles/Vel_planning.dir/rule
+
+# Convenience name for target.
+Vel_planning: z1_sdk/CMakeFiles/Vel_planning.dir/rule
+
+.PHONY : Vel_planning
+
+# fast build rule for target.
+Vel_planning/fast:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/build
+.PHONY : Vel_planning/fast
+
+# Convenience name for target.
+z1_sdk/CMakeFiles/admittance.dir/rule:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/admittance.dir/rule
+.PHONY : z1_sdk/CMakeFiles/admittance.dir/rule
+
+# Convenience name for target.
+admittance: z1_sdk/CMakeFiles/admittance.dir/rule
+
+.PHONY : admittance
+
+# fast build rule for target.
+admittance/fast:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/admittance.dir/build.make z1_sdk/CMakeFiles/admittance.dir/build
+.PHONY : admittance/fast
+
+# Convenience name for target.
 z1_sdk/CMakeFiles/ik_solver.dir/rule:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/ik_solver.dir/rule
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f CMakeFiles/Makefile2 z1_sdk/CMakeFiles/ik_solver.dir/rule
 .PHONY : z1_sdk/CMakeFiles/ik_solver.dir/rule
 
 # Convenience name for target.
@@ -239,8 +254,35 @@ ik_solver: z1_sdk/CMakeFiles/ik_solver.dir/rule
 
 # fast build rule for target.
 ik_solver/fast:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/build
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/build
 .PHONY : ik_solver/fast
+
+src/Admittance.o: src/Admittance.cpp.o
+
+.PHONY : src/Admittance.o
+
+# target to build an object file
+src/Admittance.cpp.o:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/admittance.dir/build.make z1_sdk/CMakeFiles/admittance.dir/src/Admittance.cpp.o
+.PHONY : src/Admittance.cpp.o
+
+src/Admittance.i: src/Admittance.cpp.i
+
+.PHONY : src/Admittance.i
+
+# target to preprocess a source file
+src/Admittance.cpp.i:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/admittance.dir/build.make z1_sdk/CMakeFiles/admittance.dir/src/Admittance.cpp.i
+.PHONY : src/Admittance.cpp.i
+
+src/Admittance.s: src/Admittance.cpp.s
+
+.PHONY : src/Admittance.s
+
+# target to generate assembly for a file
+src/Admittance.cpp.s:
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/admittance.dir/build.make z1_sdk/CMakeFiles/admittance.dir/src/Admittance.cpp.s
+.PHONY : src/Admittance.cpp.s
 
 src/Velocity_planning.o: src/Velocity_planning.cpp.o
 
@@ -248,7 +290,7 @@ src/Velocity_planning.o: src/Velocity_planning.cpp.o
 
 # target to build an object file
 src/Velocity_planning.cpp.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.o
 .PHONY : src/Velocity_planning.cpp.o
 
 src/Velocity_planning.i: src/Velocity_planning.cpp.i
@@ -257,7 +299,7 @@ src/Velocity_planning.i: src/Velocity_planning.cpp.i
 
 # target to preprocess a source file
 src/Velocity_planning.cpp.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.i
 .PHONY : src/Velocity_planning.cpp.i
 
 src/Velocity_planning.s: src/Velocity_planning.cpp.s
@@ -266,7 +308,7 @@ src/Velocity_planning.s: src/Velocity_planning.cpp.s
 
 # target to generate assembly for a file
 src/Velocity_planning.cpp.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/Vel_planning.dir/build.make z1_sdk/CMakeFiles/Vel_planning.dir/src/Velocity_planning.cpp.s
 .PHONY : src/Velocity_planning.cpp.s
 
 src/dataframe.o: src/dataframe.cpp.o
@@ -275,7 +317,7 @@ src/dataframe.o: src/dataframe.cpp.o
 
 # target to build an object file
 src/dataframe.cpp.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.o
 .PHONY : src/dataframe.cpp.o
 
 src/dataframe.i: src/dataframe.cpp.i
@@ -284,7 +326,7 @@ src/dataframe.i: src/dataframe.cpp.i
 
 # target to preprocess a source file
 src/dataframe.cpp.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.i
 .PHONY : src/dataframe.cpp.i
 
 src/dataframe.s: src/dataframe.cpp.s
@@ -293,7 +335,7 @@ src/dataframe.s: src/dataframe.cpp.s
 
 # target to generate assembly for a file
 src/dataframe.cpp.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/dataframe.dir/build.make z1_sdk/CMakeFiles/dataframe.dir/src/dataframe.cpp.s
 .PHONY : src/dataframe.cpp.s
 
 src/ik_solver.o: src/ik_solver.cpp.o
@@ -302,7 +344,7 @@ src/ik_solver.o: src/ik_solver.cpp.o
 
 # target to build an object file
 src/ik_solver.cpp.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.o
 .PHONY : src/ik_solver.cpp.o
 
 src/ik_solver.i: src/ik_solver.cpp.i
@@ -311,7 +353,7 @@ src/ik_solver.i: src/ik_solver.cpp.i
 
 # target to preprocess a source file
 src/ik_solver.cpp.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.i
 .PHONY : src/ik_solver.cpp.i
 
 src/ik_solver.s: src/ik_solver.cpp.s
@@ -320,7 +362,7 @@ src/ik_solver.s: src/ik_solver.cpp.s
 
 # target to generate assembly for a file
 src/ik_solver.cpp.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/ik_solver.dir/build.make z1_sdk/CMakeFiles/ik_solver.dir/src/ik_solver.cpp.s
 .PHONY : src/ik_solver.cpp.s
 
 src/main_node.o: src/main_node.cpp.o
@@ -329,7 +371,7 @@ src/main_node.o: src/main_node.cpp.o
 
 # target to build an object file
 src/main_node.cpp.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.o
 .PHONY : src/main_node.cpp.o
 
 src/main_node.i: src/main_node.cpp.i
@@ -338,7 +380,7 @@ src/main_node.i: src/main_node.cpp.i
 
 # target to preprocess a source file
 src/main_node.cpp.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.i
 .PHONY : src/main_node.cpp.i
 
 src/main_node.s: src/main_node.cpp.s
@@ -347,7 +389,7 @@ src/main_node.s: src/main_node.cpp.s
 
 # target to generate assembly for a file
 src/main_node.cpp.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_node.dir/build.make z1_sdk/CMakeFiles/main_node.dir/src/main_node.cpp.s
 .PHONY : src/main_node.cpp.s
 
 src/main_test.o: src/main_test.cpp.o
@@ -356,7 +398,7 @@ src/main_test.o: src/main_test.cpp.o
 
 # target to build an object file
 src/main_test.cpp.o:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.o
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.o
 .PHONY : src/main_test.cpp.o
 
 src/main_test.i: src/main_test.cpp.i
@@ -365,7 +407,7 @@ src/main_test.i: src/main_test.cpp.i
 
 # target to preprocess a source file
 src/main_test.cpp.i:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.i
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.i
 .PHONY : src/main_test.cpp.i
 
 src/main_test.s: src/main_test.cpp.s
@@ -374,7 +416,7 @@ src/main_test.s: src/main_test.cpp.s
 
 # target to generate assembly for a file
 src/main_test.cpp.s:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.s
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(MAKE) -f z1_sdk/CMakeFiles/main_test.dir/build.make z1_sdk/CMakeFiles/main_test.dir/src/main_test.cpp.s
 .PHONY : src/main_test.cpp.s
 
 # Help Target
@@ -384,17 +426,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... main_test"
 	@echo "... main_node"
-	@echo "... Vel_planning"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... dataframe"
+	@echo "... Vel_planning"
+	@echo "... install/local"
+	@echo "... admittance"
 	@echo "... ik_solver"
+	@echo "... src/Admittance.o"
+	@echo "... src/Admittance.i"
+	@echo "... src/Admittance.s"
 	@echo "... src/Velocity_planning.o"
 	@echo "... src/Velocity_planning.i"
 	@echo "... src/Velocity_planning.s"
@@ -421,6 +467,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

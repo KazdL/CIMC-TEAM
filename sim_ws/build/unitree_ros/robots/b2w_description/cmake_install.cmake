@@ -1,8 +1,8 @@
-# Install script for directory: /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description
+# Install script for directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,33 +38,33 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/cmake" TYPE FILE FILES
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_descriptionConfig.cmake"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_descriptionConfig-version.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_descriptionConfig.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/robots/b2w_description/catkin_generated/installspace/b2w_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/config" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/config" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description/config/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/launch" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/launch" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/meshes" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/meshes" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/urdf" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/robots/b2w_description/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/b2w_description/urdf" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/robots/b2w_description/urdf/")
 endif()
 

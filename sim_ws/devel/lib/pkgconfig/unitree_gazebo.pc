@@ -1,4 +1,4 @@
-prefix=/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel
+prefix=/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel
 
 Name: unitree_gazebo
 Description: Description of unitree_gazebo

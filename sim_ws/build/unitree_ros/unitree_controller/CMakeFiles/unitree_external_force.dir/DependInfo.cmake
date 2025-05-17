@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/unitree_controller/src/external_force.cpp" "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/unitree_controller/CMakeFiles/unitree_external_force.dir/src/external_force.cpp.o"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/unitree_controller/src/external_force.cpp" "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/unitree_controller/CMakeFiles/unitree_external_force.dir/src/external_force.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -20,8 +20,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/unitree_controller/include"
-  "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/include"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/unitree_controller/include"
+  "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

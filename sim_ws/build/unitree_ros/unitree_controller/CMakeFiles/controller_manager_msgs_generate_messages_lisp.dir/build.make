@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build
 
 # Utility rule file for controller_manager_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messa
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
 
 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/unitree_controller && $(CMAKE_COMMAND) -P CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/unitree_controller && $(CMAKE_COMMAND) -P CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/clean
 
 unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_ros/unitree_controller /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/unitree_controller /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_ros/unitree_controller /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/unitree_controller /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : unitree_ros/unitree_controller/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/depend
 

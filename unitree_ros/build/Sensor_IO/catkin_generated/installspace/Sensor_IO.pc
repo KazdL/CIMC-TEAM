@@ -1,4 +1,4 @@
-prefix=/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install
+prefix=/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install
 
 Name: Sensor_IO
 Description: Description of Sensor_IO

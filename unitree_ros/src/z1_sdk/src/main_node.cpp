@@ -1,7 +1,8 @@
 #include "unitree_arm_sdk/control/Velocity_planning.h"
 #include "unitree_arm_sdk/sensor/dataframe.h"
 #include "ros/ros.h"
-#include "unitree_arm_sdk/control/AdmittanceController.h"
+#include "unitree_arm_sdk/control/Admittance.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 
     // objects definition
     Vel_Planning planner;
-    Dataframe sensor_data;
+    Dataframe dataframe;
     UNITREE_ARM::Timer timer(planner._ctrlComp->dt);
 
     Vec6 d_mass = Vec6::Constant(1.0); // 默认质量
@@ -18,13 +19,15 @@ int main(int argc, char *argv[])
     d_stiffness << 400.0, 400.0, 400.0, 400.0, 400.0, 400.0; // 默认刚度
     double d_damping_ratio = 1.0; // 默认阻尼比
     Vec6 d_stiffness_force = Vec6::Zero(); // 默认力刚度
-    double timestep = 0.005; // 时间步长
+    double timestep = planner._ctrlComp->dt; // 时间步长
     AdmittanceController controller(d_mass, d_stiffness, d_damping_ratio, d_stiffness_force, timestep);
 
     // variables definition 
     Vec6 targetpos;
+    Vec6 target;
     Vec6 cmdPos, cmdVel;
     Vec6 xd, d_xd, dd_xd;
+    std::list<Vec6> xd_list, dxd_list, ddxd_list;
     bool motion_ready = true;
     std::string status = "init";
 
@@ -33,23 +36,43 @@ int main(int argc, char *argv[])
     planner.backToStart();
     planner.startTrack(UNITREE_ARM::ArmFSMState::JOINTCTRL);
 
-    std::list<Vec6> xd_list, dxd_list, ddxd_list;
+    
     
 
     while(ros::ok())
     {
-        if(motion_ready)
+        dataframe.update(planner);
+        if (motion_ready)
         {
             if(status == "init")
             {
                 targetpos << 0.0, 1.5, -1.0, -0.54, 0.0, 0.0;
                 HomoMat target_T = planner._ctrlComp->armModel->forwardKinematics(targetpos);
-                Vec6 target = homoToPosture(target_T);
+                target = homoToPosture(target_T);
                 // planner.trapezium(targetpos, 4000);
                 // planner.trape_move_joint(targetpos);
                 planner.trape_move_cart(target);
                 // planner.test_linear();
-                status = "terminate";
+                
+                status = "admit";
+            }
+            else if (status == "admit")
+            {
+                // xd = xd_list.front();
+                // d_xd = dxd_list.front();
+                // dd_xd = ddxd_list.front();
+                xd = target;
+                d_xd = Vec6::Zero();
+                dd_xd = Vec6::Zero();
+                
+                // xd_list.pop();
+                // dxd_list.pop();
+                // ddxd_list.pop();
+                cmdPos = dataframe.ee_pos;
+                cmdVel = dataframe.ee_vel;
+                Vec6 admit_pos = controller.update_pos(cmdPos, cmdVel, xd, d_xd, dd_xd, dataframe.ee_force);
+                planner.cmd_Pos_list.push_back(cmdPos);
+                planner.cmd_Vel_list.push_back(cmdVel);
             }
             else if (status == "terminate")
             {
@@ -60,6 +83,7 @@ int main(int argc, char *argv[])
         else{
             if (planner.cmd_Pos_list.size() != 0)
             {
+                Vec6 cur_vel = planner.lowstate->getQd();
                 cmdPos = planner.cmd_Pos_list.front();
                 cmdVel = planner.cmd_Vel_list.front();
                 planner.cmd_Pos_list.pop_front();
@@ -68,18 +92,11 @@ int main(int argc, char *argv[])
             else
             {
                 cmdVel.Zero();
-                xd = xd_list.front();
-                d_xd = dxd_list.front();
-                dd_xd = ddxd_list.front();
-                xd_list.pop();
-                dxd_list.pop();
-                ddxd_list.pop();
-                target = controller.update_pos(cmdPos, cmdVel, xd, d_xd, dd_xd, sensor_data.ee_force);
-                planner.trape_move_cart(target);
                 motion_ready = true;
             }
         }
         planner.setArmCmd(cmdPos, cmdVel);
+        
         timer.sleep();
     }
     planner.backToStart();

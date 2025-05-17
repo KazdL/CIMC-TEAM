@@ -1,8 +1,8 @@
-# Install script for directory: /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs
+# Install script for directory: /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,68 +39,68 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/msg" TYPE FILE FILES
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/MotorCmd.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/MotorState.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/BmsCmd.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/BmsState.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/Cartesian.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/IMU.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/LED.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/LowCmd.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/LowState.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/HighCmd.msg"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/HighState.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/MotorCmd.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/MotorState.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/BmsCmd.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/BmsState.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/Cartesian.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/IMU.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/LED.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/LowCmd.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/LowState.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/HighCmd.msg"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/HighState.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/cmake" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/cmake" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/include/unitree_legged_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/include/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/share/roseus/ros/unitree_legged_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/share/roseus/ros/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/share/common-lisp/ros/unitree_legged_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/share/common-lisp/ros/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/share/gennodejs/ros/unitree_legged_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/share/gennodejs/ros/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/python3/dist-packages/unitree_legged_msgs")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/python3/dist-packages/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/devel/lib/python3/dist-packages/unitree_legged_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/devel/lib/python3/dist-packages/unitree_legged_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/cmake" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/cmake" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs/cmake" TYPE FILE FILES
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgsConfig.cmake"
-    "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgsConfig-version.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgsConfig.cmake"
+    "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/catkin_generated/installspace/unitree_legged_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs" TYPE FILE FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_msgs" TYPE FILE FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/unitree_legged_msgs" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/include/unitree_legged_msgs/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/unitree_legged_msgs" TYPE DIRECTORY FILES "/home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/include/unitree_legged_msgs/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

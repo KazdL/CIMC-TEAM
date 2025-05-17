@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -O3 -std=c++14 -pthread  -shared -Wl,-soname,libadmittance.so -o /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib/libadmittance.so CMakeFiles/admittance.dir/src/Admittance.cpp.o   -L/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/z1_sdk/lib 

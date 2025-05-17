@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build
 
 # Utility rule file for _unitree_legged_msgs_generate_messages_check_deps_MotorCmd.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build
 include unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/progress.make
 
 unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py unitree_legged_msgs /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs/msg/MotorCmd.msg 
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py unitree_legged_msgs /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs/msg/MotorCmd.msg 
 
 _unitree_legged_msgs_generate_messages_check_deps_MotorCmd: unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd
 _unitree_legged_msgs_generate_messages_check_deps_MotorCmd: unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/build.make
@@ -67,10 +67,10 @@ unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps
 .PHONY : unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/build
 
 unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/clean:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/cmake_clean.cmake
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/cmake_clean.cmake
 .PHONY : unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/clean
 
 unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src/unitree_legged_msgs /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src/unitree_legged_msgs /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : unitree_legged_msgs/CMakeFiles/_unitree_legged_msgs_generate_messages_check_deps_MotorCmd.dir/depend
 

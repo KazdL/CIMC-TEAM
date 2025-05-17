@@ -67,14 +67,14 @@ set(Sensor_IO_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(Sensor_IO_SOURCE_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO)
-  set(Sensor_IO_DEVEL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel)
+  set(Sensor_IO_SOURCE_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO)
+  set(Sensor_IO_DEVEL_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel)
   set(Sensor_IO_INSTALL_PREFIX "")
   set(Sensor_IO_PREFIX ${Sensor_IO_DEVEL_PREFIX})
 else()
   set(Sensor_IO_SOURCE_PREFIX "")
   set(Sensor_IO_DEVEL_PREFIX "")
-  set(Sensor_IO_INSTALL_PREFIX /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/install)
+  set(Sensor_IO_INSTALL_PREFIX /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/install)
   set(Sensor_IO_PREFIX ${Sensor_IO_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(Sensor_IO_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO/include " STREQUAL " ")
+if(NOT "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO/include " STREQUAL " ")
   set(Sensor_IO_INCLUDE_DIRS "")
-  set(_include_dirs "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO/include")
+  set(_include_dirs "/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO/inclu
         message(FATAL_ERROR "Project 'Sensor_IO' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'Sensor_IO' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/src/Sensor_IO/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'Sensor_IO' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/Sensor_IO/${idir}'.  ${_report}")
     endif()
     _list_append_unique(Sensor_IO_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib;/home/oceanyan/Files/Robotics/unitree_ws/unitree_ros/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

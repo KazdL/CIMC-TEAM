@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src
+CMAKE_SOURCE_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build
+CMAKE_BINARY_DIR = /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/src /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build /home/oceanyan/Files/Robotics/unitree_ws/sim_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/src /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build /home/oceanyan/Files/Robotics/CIMC-TEAM/sim_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

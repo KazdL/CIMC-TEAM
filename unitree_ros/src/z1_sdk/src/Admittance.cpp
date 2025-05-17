@@ -1,13 +1,14 @@
-#include "unitree_arm_sdk/control/AdmittanceController.h"
+#include "unitree_arm_sdk/control/Admittance.h"
 
 AdmittanceController::AdmittanceController(
     const Vec6& d_mass,
     const Vec6& d_stiffness,
     double d_damping_ratio,
     const Vec6& d_stiffness_force,
-    double timestep
+    double timestep,
+    const Vec6& fd
 )
-    : Md(d_mass), Kd(d_stiffness), damping_ratio(d_damping_ratio), Kf(d_stiffness_force), timestep(timestep) {
+    : Md(d_mass), Kd(d_stiffness), damping_ratio(d_damping_ratio), Kf(d_stiffness_force), timestep(timestep), fd(fd) {
     Dd = damping_ratio * 2 * Md.cwiseSqrt().cwiseProduct(Kd.cwiseSqrt());
 
     force_err = Vec6::Zero();
@@ -23,7 +24,7 @@ AdmittanceController::AdmittanceController(
     pos_append = Vec6::Zero();
 }
 
-Vec6 AdmittanceController::update_pos(const Vec6& pos, const Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& ee_force) {
+Vec6 AdmittanceController::update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& ee_force) {
     // Compute position and velocity errors
     pos_err = pos - xd;
     vel_err = vel - d_xd;
@@ -42,6 +43,8 @@ Vec6 AdmittanceController::update_pos(const Vec6& pos, const Vec6& vel, const Ve
     pos_append = pos_err + vel_append * timestep;
 
     Vec6 result = xd + pos_append;
+    pos = xd + pos_append;
+    vel = vel + vel_append;
 
     return result;
 }
