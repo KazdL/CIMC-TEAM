@@ -46,7 +46,7 @@ Vec6 AdmittanceController::update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, cons
 
     Vec6 result = xd + pos_append;
     pos = xd + pos_append;
-    vel = vel + vel_append;
+    vel = d_xd + vel_append;
 
     return result;
 }
