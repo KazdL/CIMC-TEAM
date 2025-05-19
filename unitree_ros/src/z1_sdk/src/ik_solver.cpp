@@ -1,5 +1,6 @@
-#include "unitree_arm_sdk/ik_solver/ik_solver.h"
+#include "ik_solver.h"
 
+// 构造函数：加载URDF模型
 ik_solver::ik_solver(const std::string &urdf_filename)
     : model_loaded(false), urdf_filename(urdf_filename) {
     try {
@@ -12,6 +13,7 @@ ik_solver::ik_solver(const std::string &urdf_filename)
     }
 }
 
+// 求解逆运动学
 bool ik_solver::solve(const pinocchio::SE3 &target_pose, Eigen::VectorXd &result, Eigen::VectorXd init_pose, int joint_id) {
     if (!model_loaded) {
         std::cerr << "Model not loaded. Cannot solve IK." << std::endl;
@@ -66,13 +68,39 @@ bool ik_solver::solve(const pinocchio::SE3 &target_pose, Eigen::VectorXd &result
     std::cout << "Final configuration: " << q.transpose() << std::endl;
     std::cout << "Final error: " << err.transpose() << std::endl;
 
+    // 更新末端姿态
+    updateEndEffectorPose(joint_id);
+
     return success;
 }
 
+// 获取关节数量
 int ik_solver::getNumberOfJoints() const {
     if (!model_loaded) {
         std::cerr << "Model not loaded. Cannot get number of joints." << std::endl;
         return -1;
     }
     return model.njoints;
+}
+
+// 更新末端姿态
+void ik_solver::updateEndEffectorPose(int joint_id) {
+    if (!model_loaded) {
+        throw std::runtime_error("Model not loaded. Cannot update end-effector pose.");
+    }
+    if (joint_id < 0 || joint_id >= model.njoints) {
+        throw std::out_of_range("Invalid joint ID.");
+    }
+
+    // Forward kinematics to calculate the pose of the specified joint
+    pinocchio::forwardKinematics(model, data);
+    end_effector_pose = data.oMi[joint_id];
+}
+
+// 获取末端姿态
+pinocchio::SE3 ik_solver::getEndEffectorPose() const {
+    if (!model_loaded) {
+        throw std::runtime_error("Model not loaded. Cannot get end-effector pose.");
+    }
+    return end_effector_pose;
 }
