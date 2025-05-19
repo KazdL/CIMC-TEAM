@@ -104,22 +104,22 @@ void Vel_Planning::trape_move_cart(Vec6 targetpos)
 
 void Vel_Planning::test_MoveL_sin()
 {
-    Vec6 cur_joint_pos = lowstate->getQ();
-    HomoMat cur_T = _ctrlComp->armModel->forwardKinematics(cur_joint_pos);
-    Vec6 cur_pos = homoToPosture(cur_T);
-    Timer timer(_ctrlComp->dt);
-    Vec6 last_pos;
-    Vec6 tar_vel = lowstate->getQd();
-    for (int i = 0; i < 1000; i++)
-    {
-        last_pos = cur_pos;
-        cur_pos(4, 0) += 10* 0.3 * _ctrlComp->dt;
-        cur_pos(5, 0) = last_pos[4, 0] + 10 * sin(_ctrlComp->dt*i);
-        tar_vel(4, 0) = 10*0.3;
-        tar_vel(5, 0) = 10 * cos(_ctrlComp->dt*i);
-        move_in_Cartesian(cur_pos, tar_vel);
-        timer.sleep();
-    }
+    // Vec6 cur_joint_pos = lowstate->getQ();
+    // HomoMat cur_T = _ctrlComp->armModel->forwardKinematics(cur_joint_pos);
+    // Vec6 cur_pos = homoToPosture(cur_T);
+    // Timer timer(_ctrlComp->dt);
+    // Vec6 last_pos;
+    // Vec6 tar_vel = lowstate->getQd();
+    // for (int i = 0; i < 1000; i++)
+    // {
+    //     last_pos = cur_pos;
+    //     cur_pos(4, 0) += 10* 0.3 * _ctrlComp->dt;
+    //     cur_pos(5, 0) = last_pos[4, 0] + 10 * sin(_ctrlComp->dt*i);
+    //     tar_vel(4, 0) = 10*0.3;
+    //     tar_vel(5, 0) = 10 * cos(_ctrlComp->dt*i);
+    //     move_in_Cartesian(cur_pos, tar_vel);
+    //     timer.sleep();
+    // }
 }
 
 void Vel_Planning::test_linear()
@@ -133,19 +133,18 @@ void Vel_Planning::test_linear()
     trape_move_cart(cur_pos);
 }
 
-void Vel_Planning::move_in_Cartesian(Vec6 targetpos, Vec6 targetvel)
+void Vel_Planning::move_in_Cartesian(Vec6 target_cart_pos, Vec6 target_cart_vel, const Vec6& last_joint_pos, const Vec6& last_joint_vel)
 {
-    Vec6 last_joint_pos = lowstate->getQ();
-    Vec6 test_pos;
-    test_pos << 0.0, 0.0, 0.0, 0.0, 0.0, 0.0;
-    Vec6 last_joint_vel = lowstate->getQd();
-    HomoMat target_T = postureToHomo(targetpos);
-    Vec6 tar_joint_pos, tar_joint_vel;
-    bool invisok = _ctrlComp->armModel->inverseKinematics(target_T, last_joint_pos, tar_joint_pos);
-    _ctrlComp->armModel->solveQP(targetvel, last_joint_vel, tar_joint_vel, _ctrlComp->dt);
-    if (invisok)std::cout << "target postion:" << tar_joint_pos << std::endl;
-    else
-        std::cout << "No solution found!!" << std::endl;
-    setArmCmd(tar_joint_pos, tar_joint_vel);
+    Vec6 tar_joint_vel;
+    Eigen::VectorXd tar_joint_pos;
+    tar_joint_pos.resize(6); // 确保其大小正确（假设是6维）
+    tar_joint_pos.setZero(); // 初始化为零向量，或其他合理值
+    HomoMat target_cart_T = postureToHomo(target_cart_pos);
+    pinocchio::SE3 target_SE3_pos = pinocchio::SE3(target_cart_T);
+    bool invisok = solver.solve(target_SE3_pos, tar_joint_pos, last_joint_pos);
+    _ctrlComp->armModel->solveQP(target_cart_vel, last_joint_vel, tar_joint_vel, _ctrlComp->dt);
+    
+    cmd_Pos_list.push_back(tar_joint_pos);
+    cmd_Vel_list.push_back(tar_joint_vel);
 }
 

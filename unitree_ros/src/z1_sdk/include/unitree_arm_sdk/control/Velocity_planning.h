@@ -17,7 +17,7 @@ public:
     void trape_move_joint(Vec6 q_end);
     void test_MoveL_sin();
     void test_linear();
-    void move_in_Cartesian(Vec6 targetpos, Vec6 targetvel);
+    void move_in_Cartesian(Vec6 target_cart_pos, Vec6 target_cart_vel, const Vec6 &last_joint_pos, const Vec6 &last_joint_vel);
     double max_vel = 0.3;
     double max_acc = 1.0;
     const std::string urdf_path = "unitree_arm_sdk/ik_solver/z1.urdf";

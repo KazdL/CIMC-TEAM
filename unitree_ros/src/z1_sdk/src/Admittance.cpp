@@ -31,6 +31,8 @@ Vec6 AdmittanceController::update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, cons
     pos_err -= (-d_xd) * timestep;
     vel_err -= (-dd_xd) * timestep;
 
+    std::cout << "pos_err" << pos_err.transpose() << std::endl;
+    std::cout << "vel_err" << vel_err.transpose() << std::endl;
     force_err = ee_force - fd;
 
     // Compute cartesian acceleration append element-wise

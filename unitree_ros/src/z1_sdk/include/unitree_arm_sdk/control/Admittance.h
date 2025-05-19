@@ -11,7 +11,7 @@ public:
         double d_damping_ratio = 1.0,
         const Vec6& d_stiffness_force = Vec6::Zero(),
         double timestep = 0.005,
-        const Vec6& fd = (Vec6() << 0.5, 0, 0, 0, 0, 0).finished()
+        const Vec6& fd = (Vec6() << 0, 0, 0, 0, 0, 0).finished()
     );
 
     Vec6 update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, const Vec6& d_xd, const Vec6& dd_xd, const Vec6& fd);

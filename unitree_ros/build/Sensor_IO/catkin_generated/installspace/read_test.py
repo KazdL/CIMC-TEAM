@@ -2,19 +2,24 @@ import rospy
 from geometry_msgs.msg import Wrench, Vector3
 import struct
 import time
+import math
 
 if __name__ == "__main__":
     rospy.init_node("publisher_test_node")
     pub = rospy.Publisher("wrench", Wrench, queue_size=10)
     rate = rospy.Rate(10)  # 每秒10次发布
+    count = 0
 
     while not rospy.is_shutdown():
-        fx = 1.0
-        fy = 1.0
-        fz = 1.0
-        mx = 1.0
-        my = 1.0
-        mz = 1.0
+        count += 1
+        count = count % 100
+
+        fx = 0.0
+        fy = 0.0
+        fz = 1.0 * math.sin(math.pi/50*count)
+        mx = 0.0
+        my = 0.0
+        mz = 0.0
 
         # 创建Wrench消息并存储力和力矩
         wrench_msg = Wrench()

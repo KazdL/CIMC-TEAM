@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     Vec6 d_mass = Vec6::Constant(1.0); // 默认质量
     Vec6 d_stiffness;
     d_stiffness << 400.0, 400.0, 400.0, 400.0, 400.0, 400.0; // 默认刚度
-    double d_damping_ratio = 1.0; // 默认阻尼比
+    double d_damping_ratio = 0.0; // 默认阻尼比
     Vec6 d_stiffness_force = Vec6::Zero(); // 默认力刚度
     double timestep = planner._ctrlComp->dt; // 时间步长
     AdmittanceController controller(d_mass, d_stiffness, d_damping_ratio, d_stiffness_force, timestep);
@@ -62,17 +62,19 @@ int main(int argc, char *argv[])
                 // d_xd = dxd_list.front();
                 // dd_xd = ddxd_list.front();
                 xd = target;
+                std::cout << xd.transpose() << std::endl;
                 d_xd = Vec6::Zero();
                 dd_xd = Vec6::Zero();
                 
                 // xd_list.pop();
                 // dxd_list.pop();
                 // ddxd_list.pop();
-                cmdPos = dataframe.ee_pos;
-                cmdVel = dataframe.ee_vel;
-                Vec6 admit_pos = controller.update_pos(cmdPos, cmdVel, xd, d_xd, dd_xd, dataframe.ee_force);
-                planner.cmd_Pos_list.push_back(cmdPos);
-                planner.cmd_Vel_list.push_back(cmdVel);
+                Vec6 cmd_cart_Pos = dataframe.ee_pos;
+                Vec6 cmd_cart_Vel = dataframe.ee_vel;
+                Vec6 admit_pos = controller.update_pos(cmd_cart_Pos, cmd_cart_Vel, xd, d_xd, dd_xd, dataframe.ee_force);
+                std::cout << "cmdPos:" << cmd_cart_Pos.transpose() << std::endl;
+                std::cout << "cmdVel:" << cmd_cart_Vel.transpose() << std::endl;
+                planner.move_in_Cartesian(cmd_cart_Pos, cmd_cart_Vel, dataframe.cur_joint_pos, dataframe.cur_joint_vel);
             }
             else if (status == "terminate")
             {
