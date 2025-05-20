@@ -38,7 +38,7 @@ pinocchio/algorithm/kinematics.hpp
 pinocchio/algorithm/jacobian.hpp
 -
 pinocchio/algorithm/joint-configuration.hpp
-/home/oceanyan/Files/Robotics/CIMC-TEAM/unitree_ros/src/z1_sdk/include/unitree_arm_sdk/ik_solver/pinocchio/algorithm/joint-configuration.hpp
+-
 iostream
 -
 

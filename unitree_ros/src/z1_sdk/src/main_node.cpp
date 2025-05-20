@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
     Vec6 d_mass = Vec6::Constant(1.0); // 默认质量
     Vec6 d_stiffness;
     d_stiffness << 400.0, 400.0, 400.0, 400.0, 400.0, 400.0; // 默认刚度
-    double d_damping_ratio = 0.0; // 默认阻尼比
-    Vec6 d_stiffness_force = Vec6::Zero(); // 默认力刚度
+    double d_damping_ratio = 1.0; // 默认阻尼比
+    Vec6 d_stiffness_force = Vec6::Constant(50); // 默认力刚度
     double timestep = planner._ctrlComp->dt; // 时间步长
     AdmittanceController controller(d_mass, d_stiffness, d_damping_ratio, d_stiffness_force, timestep);
 
@@ -30,11 +30,13 @@ int main(int argc, char *argv[])
     std::list<Vec6> xd_list, dxd_list, ddxd_list;
     bool motion_ready = true;
     std::string status = "init";
-
+    std::string last_status = "init";
+    std::string stat_chg_request = "init";
     // robot action init
     planner.sendRecvThread->start();
     planner.backToStart();
     planner.startTrack(UNITREE_ARM::ArmFSMState::JOINTCTRL);
+    
 
     
     
@@ -42,6 +44,8 @@ int main(int argc, char *argv[])
     while(ros::ok())
     {
         dataframe.update(planner);
+        
+        // std::cout << "cur_joint_Vel:" << dataframe.ee_vel.transpose() << std::endl;
         if (motion_ready)
         {
             if(status == "init")
@@ -54,13 +58,19 @@ int main(int argc, char *argv[])
                 planner.trape_move_cart(target);
                 // planner.test_linear();
                 
-                status = "admit";
+                stat_chg_request = "admit";
             }
             else if (status == "admit")
             {
                 // xd = xd_list.front();
                 // d_xd = dxd_list.front();
                 // dd_xd = ddxd_list.front();
+                if(last_status != "admit")
+                {
+                    planner.startTrack(UNITREE_ARM::ArmFSMState::CARTESIAN);
+                    last_status = "admit";
+                }
+                    
                 xd = target;
                 std::cout << xd.transpose() << std::endl;
                 d_xd = Vec6::Zero();
@@ -74,7 +84,25 @@ int main(int argc, char *argv[])
                 Vec6 admit_pos = controller.update_pos(cmd_cart_Pos, cmd_cart_Vel, xd, d_xd, dd_xd, dataframe.ee_force);
                 std::cout << "cmdPos:" << cmd_cart_Pos.transpose() << std::endl;
                 std::cout << "cmdVel:" << cmd_cart_Vel.transpose() << std::endl;
-                planner.move_in_Cartesian(cmd_cart_Pos, cmd_cart_Vel, dataframe.cur_joint_pos, dataframe.cur_joint_vel);
+                // planner.move_in_Cartesian(cmd_cart_Pos, cmd_cart_Vel, dataframe.cur_joint_pos, dataframe.cur_joint_vel);
+                Vec7 direction = Vec7::Zero();
+                for (int i = 0; i < 6; i++)
+                {
+                    /* code */
+                    if(i<3)
+                    {
+                        direction[i] = saturation(cmd_cart_Vel[i] / 0.6, -1.0, 1.0);
+                    }
+                    else{
+                        direction[i] = saturation(cmd_cart_Vel[i] / 0.3, -1.0, 1.0);
+                    }
+                }
+                std::cout << "cmd_direction" << direction.transpose() << std::endl;
+                planner.cartesianCtrlCmd(direction, 0.6, 0.3);
+                // ros::spinOnce();
+                // timer.sleep();
+                // continue;
+                // planner.MoveL(cmd_cart_Pos, 0.3);
             }
             else if (status == "terminate")
             {
@@ -82,7 +110,7 @@ int main(int argc, char *argv[])
             }
             motion_ready = false;
         }
-        else{
+        if(!motion_ready){
             if (planner.cmd_Pos_list.size() != 0)
             {
                 Vec6 cur_vel = planner.lowstate->getQd();
@@ -95,10 +123,13 @@ int main(int argc, char *argv[])
             {
                 cmdVel.Zero();
                 motion_ready = true;
+                if(stat_chg_request != status)
+                    status = stat_chg_request;
             }
         }
-        planner.setArmCmd(cmdPos, cmdVel);
-        
+        if(status != "admit")
+            planner.setArmCmd(cmdPos, cmdVel);
+        ros::spinOnce();
         timer.sleep();
     }
     planner.backToStart();

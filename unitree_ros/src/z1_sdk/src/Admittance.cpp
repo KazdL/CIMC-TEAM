@@ -42,7 +42,7 @@ Vec6 AdmittanceController::update_pos(Vec6& pos, Vec6& vel, const Vec6& xd, cons
 
     // Update velocity and position append
     vel_append = vel_err + cart_acc_append * timestep;
-    pos_append = pos_err + vel_append * timestep;
+    pos_append = pos_err + 5*vel_append * timestep;
 
     Vec6 result = xd + pos_append;
     pos = xd + pos_append;

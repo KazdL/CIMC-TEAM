@@ -7,16 +7,16 @@ import math
 if __name__ == "__main__":
     rospy.init_node("publisher_test_node")
     pub = rospy.Publisher("wrench", Wrench, queue_size=10)
-    rate = rospy.Rate(10)  # 每秒10次发布
+    rate = rospy.Rate(500)  # 每秒10次发布
     count = 0
 
     while not rospy.is_shutdown():
         count += 1
-        count = count % 100
-
-        fx = 0.0
+        count = count % 2000
+        # 1.0 * math.sin(math.pi/1000*count)
+        fx = 1.0 * math.sin(math.pi/1000*count)
         fy = 0.0
-        fz = 1.0 * math.sin(math.pi/50*count)
+        fz = 0.0
         mx = 0.0
         my = 0.0
         mz = 0.0

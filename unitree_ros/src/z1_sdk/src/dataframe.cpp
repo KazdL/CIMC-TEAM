@@ -33,9 +33,8 @@ void Dataframe::wrenchCallback(const geometry_msgs::Wrench::ConstPtr& msg)
     torque.z = world_torque.z();
     
     // 4. Store in ee_force array
-    ee_force << world_force.x(), world_force.y(), world_force.z(),
-                world_torque.x(), world_torque.y(), world_torque.z();
-    
+    ee_force << world_torque.x(), world_torque.y(), world_torque.z(), world_force.x(), world_force.y(), world_force.z();
+
     ROS_INFO_STREAM("World Frame Force: [" << force.x << ", " << force.y << ", " << force.z << "]");
     ROS_INFO_STREAM("World Frame Torque: [" << torque.x << ", " << torque.y << ", " << torque.z << "]");
 }

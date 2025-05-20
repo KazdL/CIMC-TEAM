@@ -143,8 +143,9 @@ void Vel_Planning::move_in_Cartesian(Vec6 target_cart_pos, Vec6 target_cart_vel,
     pinocchio::SE3 target_SE3_pos = pinocchio::SE3(target_cart_T);
     bool invisok = solver.solve(target_SE3_pos, tar_joint_pos, last_joint_pos);
     _ctrlComp->armModel->solveQP(target_cart_vel, last_joint_vel, tar_joint_vel, _ctrlComp->dt);
-    
+    Vec6 cmd_joint2cart_pos = homoToPosture(_ctrlComp->armModel->forwardKinematics(tar_joint_pos));
+    std::cout << "cmd_joint2cart_pos" << cmd_joint2cart_pos << std::endl;
     cmd_Pos_list.push_back(tar_joint_pos);
-    cmd_Vel_list.push_back(tar_joint_vel);
+    cmd_Vel_list.push_back(Vec6::Zero());
 }
 
